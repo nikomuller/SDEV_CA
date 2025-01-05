@@ -1,10 +1,19 @@
-#To Run
-git clone 
+#How To Run
 
+git clone https://github.com/nikomuller/SDEV_CA.git
+cd your-repository-folder
 
+python -m venv pyvenv
+pyvenv\Scripts\activate
 
+cd scillium
 
+pip install -r requirements.txt
 
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py runserver
 
 
 # Notes
@@ -66,6 +75,6 @@ it was a great tool to use to help us create the website.
  - Nikolas Muller: I created the product, search, cart and order apps, I added stripe payment functionality and I also created some of the templates involved, I also helped my team mate finish some of his apps quicker as did he, i updated some of the css to help it match the style of the web page we were creating, i was updating the git repo aswell as this readme file and settings.py file meanwhile doing my work to make everything link together and function properly together.
 
 
- - Grzegorz Maniak: I was responsible for the initial set up of the project, I mainly focues on QOL features and just generaly making the product feature rich. I designed the whole look and feel of the site, I did not create much of the apps, but I did aid Nikolas in fixing bugs and refactoring code.
+ - Team Mate: I was responsible for the initial set up of the project, I mainly focues on QOL features and just generaly making the product feature rich. I designed the whole look and feel of the site, I did not create much of the apps, but I did aid Nikolas in fixing bugs and refactoring code.
 
 We both feel that we both did a good job and we both worked well together, we both helped each other out when we got stuck and we both worked well together to get the project done on time.
