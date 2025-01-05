@@ -1,3 +1,12 @@
+#To Run
+git clone 
+
+
+
+
+
+
+
 # Notes
 
 - Changed to this repo as I have ownership and have made it public.
