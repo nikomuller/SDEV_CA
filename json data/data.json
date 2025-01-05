@@ -1,0 +1,1950 @@
+[
+{
+  "model": "sessions.session",
+  "pk": "b07v5u4fvxj7aqre795vhrgqmrolxt0d",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pAhA4W6dO8ZyMAMUjU0Ke3KeHdt0oVu_3vvv1Skba1x67LEidVZoTr9bonyQ9oO-E7tNus8t3WZkt4VfdCurzPL83K4fweVev3WmUZikQHRZwBrjR1LwAIMwSTnwPkCmIJQKezyYHNCR2ggQBL25NX7A-sSOCI:1p4E7O:FAyq--bUDjeOonrhAUYO5twH-KAIR4Z-oqDvvwyzquQ",
+    "expire_date": "2022-12-25T04:39:14.574Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "eljga3pnpt656e93vdo5haklr5f01avb",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-xZtQ0nMGy95d4wBypDipEHcHSymgfTPzXiLEfSthb7yGmcRZGHH63VLEB9cO6B7rbZG41G2dk-yKPGiT14X4eTncv4MSW-k1KtCcsiXPahoZfQKyaI0zYAETa6I40DR4ckY5m0GB_eowakKfvXh_APydODc:1p3phQ:OSOVrrIhlD7DPsMkUhbr9vCzuuTHp0mge-1HuC_A2K8",
+    "expire_date": "2022-12-24T02:34:48.728Z"
+  }
+},
+{
+  "model": "ui_elements.link",
+  "pk": 1,
+  "fields": {
+    "name": "Home",
+    "description": "Homepage",
+    "link_type": "reverseable_url",
+    "url": "splash_page:splash_page"
+  }
+},
+{
+  "model": "ui_elements.link",
+  "pk": 2,
+  "fields": {
+    "name": "Store",
+    "description": "Store page",
+    "link_type": "reverseable_url",
+    "url": "product:all_products"
+  }
+},
+{
+  "model": "ui_elements.link",
+  "pk": 3,
+  "fields": {
+    "name": "About us",
+    "description": "About us page",
+    "link_type": "reverseable_url",
+    "url": "extra:about_us"
+  }
+},
+{
+  "model": "ui_elements.link",
+  "pk": 4,
+  "fields": {
+    "name": "GM - Email",
+    "description": "Personal email",
+    "link_type": "email",
+    "url": "me@grzegorz.ie"
+  }
+},
+{
+  "model": "ui_elements.link",
+  "pk": 5,
+  "fields": {
+    "name": "GM - Personal",
+    "description": "My personal site",
+    "link_type": "url",
+    "url": "https://grzegorz.ie"
+  }
+},
+{
+  "model": "ui_elements.link",
+  "pk": 6,
+  "fields": {
+    "name": "GM - Github",
+    "description": "Personal Github",
+    "link_type": "url",
+    "url": "https://git.grzegorz.ie"
+  }
+},
+{
+  "model": "ui_elements.link",
+  "pk": 7,
+  "fields": {
+    "name": "GM - Linkedin",
+    "description": "My linkedin account",
+    "link_type": "url",
+    "url": "https://linkedin.grzegorz.ie"
+  }
+},
+{
+  "model": "ui_elements.link",
+  "pk": 8,
+  "fields": {
+    "name": "NM - Github",
+    "description": "My github page",
+    "link_type": "url",
+    "url": "https://github.com/nikomuller"
+  }
+},
+{
+  "model": "ui_elements.link",
+  "pk": 9,
+  "fields": {
+    "name": "NM - Linkedin",
+    "description": "My linkedin account",
+    "link_type": "url",
+    "url": "https://www.linkedin.com/in/nikomuller42/"
+  }
+},
+{
+  "model": "ui_elements.link",
+  "pk": 10,
+  "fields": {
+    "name": "NM - Email",
+    "description": "My personal email",
+    "link_type": "email",
+    "url": "x00188513@mytudublin.ie"
+  }
+},
+{
+  "model": "ui_elements.link",
+  "pk": 11,
+  "fields": {
+    "name": "TOS",
+    "description": "Terms of service",
+    "link_type": "reverseable_url",
+    "url": "extra:terms_of_service"
+  }
+},
+{
+  "model": "ui_elements.link",
+  "pk": 12,
+  "fields": {
+    "name": "Privacy",
+    "description": "Privacy policy",
+    "link_type": "reverseable_url",
+    "url": "extra:privacy_policy"
+  }
+},
+{
+  "model": "ui_elements.nav",
+  "pk": 1,
+  "fields": {
+    "name": "Main nav",
+    "links": [
+      1,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "ui_elements.footer",
+  "pk": 1,
+  "fields": {
+    "name": "Temp footer",
+    "links": [
+      1,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "ui_elements.footer",
+  "pk": 2,
+  "fields": {
+    "name": "Real footer",
+    "links": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      10,
+      11,
+      12
+    ]
+  }
+},
+{
+  "model": "ui_elements.contact",
+  "pk": 1,
+  "fields": {
+    "name": "Grzegorz (Greg) Maniak",
+    "email": "me@grzegorz.ie",
+    "message": "Current 2nd Year Full-Time Student at Technological University Dublin | BSc in Computing with Software Development | I enjoy learning new and cool technologies"
+  }
+},
+{
+  "model": "ui_elements.contact",
+  "pk": 2,
+  "fields": {
+    "name": "Nikolas (Niko) Muller",
+    "email": "x00188513@mytudublin.ie",
+    "message": "I worked a summer in fulltime at PRL corporation I was picking orders such as orders for Tesco, Sam Dennigans, ALDI etc.\r\nI then changed jobs to a better suitable one for me as it has more flexible hours for me as a im a student studying Computer Science in TUD Tallaght and now I pick orders at Uniphar another warehouse involved with medicine this time.\r\nIm eager to keep working and progressing my career"
+  }
+},
+{
+  "model": "ui_elements.aboutus",
+  "pk": 1,
+  "fields": {
+    "name": "Grzegorz (Greg) Maniak",
+    "description": "Current 2nd Year Full-Time Student at Technological University Dublin | BSc in Computing with Software Development | I enjoy learning new and cool technologies",
+    "photo": "about_us/a260def0-f275-4e8f-94b4-3984fe861184.jpeg",
+    "socials": [
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "ui_elements.aboutus",
+  "pk": 2,
+  "fields": {
+    "name": "Nikolas (Niko) Muller",
+    "description": "I worked a summer in fulltime at PRL corporation I was picking orders such as orders for Tesco, Sam Dennigans, ALDI etc.\r\nI then changed jobs to a better suitable one for me as it has more flexible hours for me as a im a student studying Computer Science in TUD Tallaght and now I pick orders at Uniphar another warehouse involved with medicine this time.\r\nIm eager to keep working and progressing my career",
+    "photo": "about_us/6dc01f3f-f7d1-4ee5-9855-1bdac98ae472.jpeg",
+    "socials": [
+      8,
+      9,
+      10
+    ]
+  }
+},
+{
+  "model": "ui_elements.termsofservice",
+  "pk": 1,
+  "fields": {
+    "name": "TOS - Real",
+    "content": "1. Terms\r\n\r\nBy accessing this Website, accessible from Scillium.com, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.\r\n2. Use License\r\n\r\nPermission is granted to temporarily download one copy of the materials on Scillium's Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:\r\n\r\n    modify or copy the materials;\r\n    use the materials for any commercial purpose or for any public display;\r\n    attempt to reverse engineer any software contained on Scillium's Website;\r\n    remove any copyright or other proprietary notations from the materials; or\r\n    transferring the materials to another person or \"mirror\" the materials on any other server.\r\n\r\nThis will let Scillium to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format. These Terms of Service has been created with the help of the Terms Of Service Generator.\r\n3. Disclaimer\r\n\r\nAll the materials on Scillium’s Website are provided \"as is\". Scillium makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, Scillium does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.\r\n4. Limitations\r\n\r\nScillium or its suppliers will not be hold accountable for any damages that will arise with the use or inability to use the materials on Scillium’s Website, even if Scillium or an authorize representative of this Website has been notified, orally or written, of the possibility of such damage. Some jurisdiction does not allow limitations on implied warranties or limitations of liability for incidental damages, these limitations may not apply to you.\r\n5. Revisions and Errata\r\n\r\nThe materials appearing on Scillium’s Website may include technical, typographical, or photographic errors. Scillium will not promise that any of the materials in this Website are accurate, complete, or current. Scillium may change the materials contained on its Website at any time without notice. Scillium does not make any commitment to update the materials.\r\n6. Links\r\n\r\nScillium has not reviewed all of the sites linked to its Website and is not responsible for the contents of any such linked site. The presence of any link does not imply endorsement by Scillium of the site. The use of any linked website is at the user’s own risk.\r\n7. Site Terms of Use Modifications\r\n\r\nScillium may revise these Terms of Use for its Website at any time without prior notice. By using this Website, you are agreeing to be bound by the current version of these Terms and Conditions of Use.\r\n8. Your Privacy\r\n\r\nPlease read our Privacy Policy.\r\n9. Governing Law\r\n\r\nAny claim related to Scillium's Website shall be governed by the laws of ie without regards to its conflict of law provisions.",
+    "last_updated": "2022-12-10T01:09:19.948Z"
+  }
+},
+{
+  "model": "ui_elements.privacypolicy",
+  "pk": 1,
+  "fields": {
+    "name": "PP - Real",
+    "content": "Privacy Policy for Scillium\r\n\r\nAt Scillium, accessible from Scillium.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Scillium and how we use it.\r\n\r\nIf you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.\r\n\r\nThis Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in Scillium. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the Free Privacy Policy Generator.\r\nConsent\r\n\r\nBy using our website, you hereby consent to our Privacy Policy and agree to its terms.\r\nInformation we collect\r\n\r\nThe personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.\r\n\r\nIf you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.\r\n\r\nWhen you register for an Account, we may ask for your contact information, including items such as name, company name, address, email address, and telephone number.\r\nHow we use your information\r\n\r\nWe use the information we collect in various ways, including to:\r\n\r\n    Provide, operate, and maintain our website\r\n    Improve, personalize, and expand our website\r\n    Understand and analyze how you use our website\r\n    Develop new products, services, features, and functionality\r\n    Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the website, and for marketing and promotional purposes\r\n    Send you emails\r\n    Find and prevent fraud\r\n\r\nLog Files\r\n\r\nScillium follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.\r\nCookies and Web Beacons\r\n\r\nLike any other website, Scillium uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.\r\nAdvertising Partners Privacy Policies\r\n\r\nYou may consult this list to find the Privacy Policy for each of the advertising partners of Scillium.\r\n\r\nThird-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on Scillium, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.\r\n\r\nNote that Scillium has no access to or control over these cookies that are used by third-party advertisers.\r\nThird Party Privacy Policies\r\n\r\nScillium's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.\r\n\r\nYou can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.\r\nCCPA Privacy Rights (Do Not Sell My Personal Information)\r\n\r\nUnder the CCPA, among other rights, California consumers have the right to:\r\n\r\nRequest that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.\r\n\r\nRequest that a business delete any personal data about the consumer that a business has collected.\r\n\r\nRequest that a business that sells a consumer's personal data, not sell the consumer's personal data.\r\n\r\nIf you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.\r\nGDPR Data Protection Rights\r\n\r\nWe would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:\r\n\r\nThe right to access – You have the right to request copies of your personal data. We may charge you a small fee for this service.\r\n\r\nThe right to rectification – You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete.\r\n\r\nThe right to erasure – You have the right to request that we erase your personal data, under certain conditions.\r\n\r\nThe right to restrict processing – You have the right to request that we restrict the processing of your personal data, under certain conditions.\r\n\r\nThe right to object to processing – You have the right to object to our processing of your personal data, under certain conditions.\r\n\r\nThe right to data portability – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.\r\n\r\nIf you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.\r\nChildren's Information\r\n\r\nAnother part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.\r\n\r\nScillium does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.\r\n\r\nGenerated using Privacy Policy Generator",
+    "last_updated": "2022-12-10T01:10:56.734Z"
+  }
+},
+{
+  "model": "ui_elements.configuration",
+  "pk": 1,
+  "fields": {
+    "name": "Main UI Config",
+    "active_privacy_policy": 1,
+    "active_terms_of_service": 1,
+    "nav_bar": 1,
+    "footer": 2,
+    "contacts": [
+      1,
+      2
+    ],
+    "about_us": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "splash_page.showcasecarousel",
+  "pk": 1,
+  "fields": {
+    "name": "Non sesonal",
+    "description": "Non seasonal carousel, general games",
+    "loop_every_ms": 4000,
+    "animation_time_ms": 1000,
+    "max_images": 4,
+    "products": [
+      "124352cb-aa6d-44cc-89f3-2cecec4d75f9",
+      "50bd8d59-2114-4cf0-84b6-b396a998c2c1",
+      "692bc210-7475-460a-b833-19800b676752",
+      "79821130-af9a-48ee-9ed1-e0ddb8552d9e",
+      "ada7bb0d-457e-457e-9fd8-24ff7f759a99"
+    ]
+  }
+},
+{
+  "model": "splash_page.configuration",
+  "pk": 1,
+  "fields": {
+    "name": "All year round",
+    "active_banner": null,
+    "active_carousel": 1
+  }
+},
+{
+  "model": "product.serverrequirements",
+  "pk": 1,
+  "fields": {
+    "name": "Minecraft",
+    "cpu": 2,
+    "ram": 8,
+    "gpu": 0
+  }
+},
+{
+  "model": "product.serverrequirements",
+  "pk": 2,
+  "fields": {
+    "name": "High",
+    "cpu": 4,
+    "ram": 8,
+    "gpu": 1
+  }
+},
+{
+  "model": "product.serverrequirements",
+  "pk": 3,
+  "fields": {
+    "name": "Conan",
+    "cpu": 2,
+    "ram": 4,
+    "gpu": 0
+  }
+},
+{
+  "model": "product.serverrequirements",
+  "pk": 4,
+  "fields": {
+    "name": "BF1",
+    "cpu": 4,
+    "ram": 8,
+    "gpu": 1
+  }
+},
+{
+  "model": "product.serverrequirements",
+  "pk": 5,
+  "fields": {
+    "name": "Rust",
+    "cpu": 4,
+    "ram": 16,
+    "gpu": 2
+  }
+},
+{
+  "model": "product.serverrequirements",
+  "pk": 6,
+  "fields": {
+    "name": "TF2",
+    "cpu": 2,
+    "ram": 4,
+    "gpu": 0
+  }
+},
+{
+  "model": "product.serverrequirements",
+  "pk": 7,
+  "fields": {
+    "name": "CS",
+    "cpu": 2,
+    "ram": 4,
+    "gpu": 0
+  }
+},
+{
+  "model": "product.serverrequirements",
+  "pk": 8,
+  "fields": {
+    "name": "Terratia",
+    "cpu": 2,
+    "ram": 3,
+    "gpu": 0
+  }
+},
+{
+  "model": "product.product",
+  "pk": "124352cb-aa6d-44cc-89f3-2cecec4d75f9",
+  "fields": {
+    "name": "Rust",
+    "description": "Rust was initially created as a clone of DayZ, a popular mod for ARMA 2, with crafting elements akin to those in Minecraft. The objective of Rust is to survive in the wilderness using gathered or stolen materials. Players must successfully manage their hunger, thirst, and health, or risk dying.",
+    "available": true,
+    "max_quantity": -1,
+    "price": "10.00",
+    "server_requirements": 5,
+    "stock": -10,
+    "card_image": "products/card/bbeba099-dafe-44f2-ac5d-67f898768f8a.jpg",
+    "splash_image": "products/splash/e86ee841-a1e9-494d-9bca-e217ff6182b4.jpg",
+    "time_limit": 30,
+    "time_created": "2022-12-10T01:32:52.477Z",
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "product.product",
+  "pk": "2414a011-79f9-44a2-969e-f4f8c7c41889",
+  "fields": {
+    "name": "Team Fortress 2",
+    "description": "Team Fortress 2 is a 2007 multiplayer first-person shooter game developed and published by Valve Corporation. It is the sequel to the 1996 Team Fortress mod for Quake and its 1999 remake, Team Fortress Classic",
+    "available": true,
+    "max_quantity": -1,
+    "price": "3.00",
+    "server_requirements": 6,
+    "stock": -1,
+    "card_image": "products/card/7bdc7f75-2079-4303-8585-179c19e2a3ac.jpg",
+    "splash_image": "products/splash/45832515-40d9-4e31-aa3a-da56720a50b4.jpg",
+    "time_limit": 30,
+    "time_created": "2022-12-11T04:25:09.280Z",
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "product.product",
+  "pk": "3af82608-4770-4255-a08c-781fdeb1b8e9",
+  "fields": {
+    "name": "100 Credits",
+    "description": "100 Credits = 1 Euro",
+    "available": true,
+    "max_quantity": -1,
+    "price": "1.00",
+    "server_requirements": null,
+    "stock": -1,
+    "card_image": "products/card/353e6023-99b4-4827-98d7-90dd32d52bee.png",
+    "splash_image": "products/splash/74d7238a-e47d-41c5-a16e-8be07c16e3b3.png",
+    "time_limit": -1,
+    "time_created": "2022-12-10T02:08:50.459Z",
+    "category": [
+      2
+    ]
+  }
+},
+{
+  "model": "product.product",
+  "pk": "50bd8d59-2114-4cf0-84b6-b396a998c2c1",
+  "fields": {
+    "name": "Battlefield 1",
+    "description": "Battlefield 1 is a first-person shooter game developed by DICE and published by Electronic Arts. It is the tenth installment in the Battlefield series and the first main entry in the series since Battlefield 4 in 2013. It was released for Microsoft Windows, PlayStation 4 and Xbox One in October 2016.",
+    "available": true,
+    "max_quantity": -1,
+    "price": "5.00",
+    "server_requirements": 4,
+    "stock": -1,
+    "card_image": "products/card/f72de9fb-6f43-4d3a-8d8a-a2d13099dd39.jpg",
+    "splash_image": "products/splash/01521a83-58cc-4435-9b49-4816666160ea.jpg",
+    "time_limit": 30,
+    "time_created": "2022-12-10T01:39:23.650Z",
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "product.product",
+  "pk": "692bc210-7475-460a-b833-19800b676752",
+  "fields": {
+    "name": "Conan Exiles",
+    "description": "Conan Exiles is a survival video game developed and published by Funcom for Microsoft Windows, PlayStation 4, and Xbox One. The game is set in the world of Conan the Barbarian, with the custom playable character being rescued by Conan, beginning their journey.",
+    "available": true,
+    "max_quantity": -1,
+    "price": "15.00",
+    "server_requirements": 3,
+    "stock": -1,
+    "card_image": "products/card/99b175fb-8e68-4dbc-9353-4d43b684f92e.jpg",
+    "splash_image": "products/splash/f506add7-5325-4745-b62e-066e129b20bb.jpeg",
+    "time_limit": 30,
+    "time_created": "2022-12-10T01:41:17.169Z",
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "product.product",
+  "pk": "79821130-af9a-48ee-9ed1-e0ddb8552d9e",
+  "fields": {
+    "name": "Minecraft",
+    "description": "Minecraft is a sandbox game developed by Mojang Studios. The game was created by Markus \"Notch\" Persson in the Java programming language.",
+    "available": true,
+    "max_quantity": 1,
+    "price": "2.50",
+    "server_requirements": 1,
+    "stock": -1,
+    "card_image": "products/card/b99e1405-262f-42cc-864e-0cd62713d7d5.jpg",
+    "splash_image": "products/splash/47af0ab0-1da5-45dd-b2d6-45c657977d33.jpg",
+    "time_limit": 30,
+    "time_created": "2022-12-10T01:41:49.732Z",
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "product.product",
+  "pk": "ada7bb0d-457e-457e-9fd8-24ff7f759a99",
+  "fields": {
+    "name": "ARK: Survival Evolved",
+    "description": "Ark: Survival Evolved is a 2017 action-adventure survival video game developed by Studio Wildcard. In the game, players must survive being stranded on one of several maps filled with roaming dinosaurs, fictional fantasy monsters, and other prehistoric animals, natural hazards, and potentially hostile human players. Wikipedia",
+    "available": true,
+    "max_quantity": -1,
+    "price": "15.00",
+    "server_requirements": 2,
+    "stock": -1,
+    "card_image": "products/card/d848071c-a691-4de6-9f2d-a59788262a85.jpg",
+    "splash_image": "products/splash/10f10eef-6778-4663-9ce1-92318e9a5ebc.jpeg",
+    "time_limit": 30,
+    "time_created": "2022-12-10T01:43:14.510Z",
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "product.product",
+  "pk": "cdfab83d-f257-4686-974b-c0b84a577d4b",
+  "fields": {
+    "name": "CS:GO",
+    "description": "Counter-Strike: Global Offensive is a 2012 multiplayer tactical first-person shooter developed by Valve and Hidden Path Entertainment. It is the fourth game in the Counter-Strike series.",
+    "available": true,
+    "max_quantity": -1,
+    "price": "2.50",
+    "server_requirements": 7,
+    "stock": -1,
+    "card_image": "products/card/add9f89b-8577-4975-a6db-b30852f5f59c.jpg",
+    "splash_image": "products/splash/7eac2a50-f679-459d-b809-0f098c93f8d0.jpg",
+    "time_limit": 15,
+    "time_created": "2022-12-11T04:26:14.048Z",
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "product.product",
+  "pk": "eb91694e-1aea-467b-923d-75b4be238915",
+  "fields": {
+    "name": "1000 Credits",
+    "description": "1000 Credits pack, 10% discount, first time buyers only",
+    "available": true,
+    "max_quantity": 1,
+    "price": "9.00",
+    "server_requirements": null,
+    "stock": -1,
+    "card_image": "products/card/a858cbb7-76a5-4546-bbea-1fbb4bf66e54.png",
+    "splash_image": "products/splash/cd43c95e-a6f0-4a97-99ff-d299405765f7.png",
+    "time_limit": -1,
+    "time_created": "2022-12-11T04:27:25.842Z",
+    "category": [
+      2
+    ]
+  }
+},
+{
+  "model": "product.product",
+  "pk": "f40412a8-fcf1-4218-aec1-fa1c1a36b572",
+  "fields": {
+    "name": "Terraria",
+    "description": "Terraria is an action-adventure sandbox game developed by Re-Logic. The game was first released for Windows on May 16, 2011, and has since been ported to several other platforms. The game features exploration, crafting, building, painting, and combat with a variety of creatures in a procedurally generated 2D world.",
+    "available": true,
+    "max_quantity": -1,
+    "price": "1.00",
+    "server_requirements": 8,
+    "stock": -1,
+    "card_image": "products/card/8d863f54-61ac-4599-8317-45b19d9a4c91.jpg",
+    "splash_image": "products/splash/49a1ed51-415d-464f-8688-7f7fb0fbd99c.png",
+    "time_limit": 30,
+    "time_created": "2022-12-11T04:29:17.253Z",
+    "category": [
+      1
+    ]
+  }
+},
+{
+  "model": "product.category",
+  "pk": 1,
+  "fields": {
+    "name": "Server",
+    "slug": "server",
+    "description": "Hosting service is provided for this item"
+  }
+},
+{
+  "model": "product.category",
+  "pk": 2,
+  "fields": {
+    "name": "Credits",
+    "slug": "credits",
+    "description": "Credit pack"
+  }
+},
+{
+  "model": "product.discount",
+  "pk": 1,
+  "fields": {
+    "name": "Half off Hosting",
+    "code": "50FIFTY",
+    "description": "50% OFF All base hosting plans, limited to the first 1000 people",
+    "discount": 50,
+    "uses": 1000,
+    "uses_used": 0,
+    "max_per_user": 1,
+    "product_list_selector": "blacklist",
+    "category_list_selector": "whitelist",
+    "products": [],
+    "categories": [
+      1
+    ]
+  }
+},
+{
+  "model": "product.discount",
+  "pk": 2,
+  "fields": {
+    "name": "10% OFF For new users",
+    "code": "10OFF",
+    "description": "10% OFF For new users who use the code '10OFF' at checkout",
+    "discount": 10,
+    "uses": -1,
+    "uses_used": 0,
+    "max_per_user": 1,
+    "product_list_selector": "whitelist",
+    "category_list_selector": "blacklist",
+    "products": [],
+    "categories": [
+      2
+    ]
+  }
+},
+{
+  "model": "users.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$npXmUYJZbYyiLlNrnLrAOi$/sjYIUJVz05kz0t8ictnqF32m1Ivo6N5wDX05Lt643k=",
+    "last_login": "2022-12-10T20:42:52.356Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@scillium.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-12-10T01:06:26.687Z",
+    "credits": 0,
+    "groups": [],
+    "user_permissions": [],
+    "user_class": []
+  }
+},
+{
+  "model": "users.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$8IZX9h35HlpF52MIWrAe4Y$1W1DtOGL57f0N1+6Hs3hvYJY/UD5RgvyBSp8k67uo5A=",
+    "last_login": "2022-12-10T02:34:48Z",
+    "is_superuser": false,
+    "username": "test_user",
+    "first_name": "",
+    "last_name": "",
+    "email": "test@test.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-12-10T02:34:48Z",
+    "credits": 0,
+    "groups": [],
+    "user_permissions": [],
+    "user_class": []
+  }
+},
+{
+  "model": "users.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$oQd37WxoBMCoa0VTTXRZ65$MgpVetkn8+7hTywfDlLw5LkCpGCswrUZqynZh21LFHA=",
+    "last_login": "2022-12-11T04:39:14.571Z",
+    "is_superuser": false,
+    "username": "greg",
+    "first_name": "",
+    "last_name": "",
+    "email": "fgre@gre4m.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-12-10T20:55:06.957Z",
+    "credits": 0,
+    "groups": [],
+    "user_permissions": [],
+    "user_class": []
+  }
+},
+{
+  "model": "users.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$zDkeXSJn67qZQZVDEJWPW2$7ZO/JArxzKZA5+Xh59V63xlPsZw65dbNrYaIQ8S3Vis=",
+    "last_login": "2022-12-11T00:04:22.928Z",
+    "is_superuser": true,
+    "username": "admin1",
+    "first_name": "",
+    "last_name": "",
+    "email": "adm@fgm.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-12-11T00:04:12.174Z",
+    "credits": 0,
+    "groups": [],
+    "user_permissions": [],
+    "user_class": []
+  }
+},
+{
+  "model": "users.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$6LgkA6bmBUsZUfQAdLq8oP$/qB1LPj1XGAcUwm01OxtERBzNgzd8AGxfBHC0eaTk0c=",
+    "last_login": "2022-12-11T03:27:39.833Z",
+    "is_superuser": true,
+    "username": "test",
+    "first_name": "",
+    "last_name": "",
+    "email": "1@1.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-12-11T03:27:20.884Z",
+    "credits": 0,
+    "groups": [],
+    "user_permissions": [],
+    "user_class": []
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 1,
+  "fields": {
+    "cart_id": "e1ic83wkj8b46n5nehdjol4l03mr1tix",
+    "date_added": "2022-12-10"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 2,
+  "fields": {
+    "cart_id": "3p828qmspnx6557e63s0gbd2wsifw0kd",
+    "date_added": "2022-12-11"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 3,
+  "fields": {
+    "cart_id": "wgj18vjgc5vw2n7u0x9bhx2l1sdbavq3",
+    "date_added": "2022-12-11"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 4,
+  "fields": {
+    "cart_id": "rihpj2opw19k6eyr21rrtbwrlczbmvpb",
+    "date_added": "2022-12-11"
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 1,
+  "fields": {
+    "product": "124352cb-aa6d-44cc-89f3-2cecec4d75f9",
+    "cart": 1,
+    "quantity": 3,
+    "active": true
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 4,
+  "fields": {
+    "product": "124352cb-aa6d-44cc-89f3-2cecec4d75f9",
+    "cart": 2,
+    "quantity": 3,
+    "active": true
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 9,
+  "fields": {
+    "product": "124352cb-aa6d-44cc-89f3-2cecec4d75f9",
+    "cart": 3,
+    "quantity": 1,
+    "active": true
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 10,
+  "fields": {
+    "product": "79821130-af9a-48ee-9ed1-e0ddb8552d9e",
+    "cart": 3,
+    "quantity": 1,
+    "active": true
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 11,
+  "fields": {
+    "product": "50bd8d59-2114-4cf0-84b6-b396a998c2c1",
+    "cart": 3,
+    "quantity": 3,
+    "active": true
+  }
+},
+{
+  "model": "order.order",
+  "pk": "037fee79-6095-4a91-b321-235736fbab31",
+  "fields": {
+    "token": "tok_1MDglTCxrXV1ZI6zySjTplK0",
+    "total": "30.00",
+    "emailAddress": "fees@grzegorz.ie",
+    "created": "2022-12-11T04:03:51.640Z",
+    "billingName": "",
+    "user": [
+      "test"
+    ]
+  }
+},
+{
+  "model": "order.order",
+  "pk": "7ce02a4b-d810-4e04-8a5f-5e6aa00af70e",
+  "fields": {
+    "token": "tok_1MDglyCxrXV1ZI6zZsRe8Xwx",
+    "total": "30.00",
+    "emailAddress": "concert_finder@grzegorz.ie",
+    "created": "2022-12-11T04:04:22.254Z",
+    "billingName": "",
+    "user": [
+      "test"
+    ]
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 3,
+  "fields": {
+    "product": "Rust",
+    "quantity": 3,
+    "price": "10.00",
+    "order": "037fee79-6095-4a91-b321-235736fbab31"
+  }
+},
+{
+  "model": "order.orderitem",
+  "pk": 4,
+  "fields": {
+    "product": "Rust",
+    "quantity": 3,
+    "price": "10.00",
+    "order": "7ce02a4b-d810-4e04-8a5f-5e6aa00af70e"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2022-12-10T01:09:19.948Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "termsofservice"
+    ],
+    "object_id": "1",
+    "object_repr": "TOS - Real",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2022-12-10T01:10:56.734Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "privacypolicy"
+    ],
+    "object_id": "1",
+    "object_repr": "PP - Real",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2022-12-10T01:11:29.762Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "link"
+    ],
+    "object_id": "1",
+    "object_repr": "Home",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2022-12-10T01:12:22.383Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "link"
+    ],
+    "object_id": "2",
+    "object_repr": "Store",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2022-12-10T01:12:53.164Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "link"
+    ],
+    "object_id": "3",
+    "object_repr": "About us",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2022-12-10T01:13:36.082Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "contact"
+    ],
+    "object_id": "1",
+    "object_repr": "Grzegorz (Greg) Maniak",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2022-12-10T01:14:41.256Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "contact"
+    ],
+    "object_id": "2",
+    "object_repr": "Nikolas (Niko) Muller",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2022-12-10T01:15:26.675Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "link"
+    ],
+    "object_id": "4",
+    "object_repr": "GM - Email",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2022-12-10T01:15:54.995Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "link"
+    ],
+    "object_id": "5",
+    "object_repr": "GM - Personal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2022-12-10T01:16:11.627Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "link"
+    ],
+    "object_id": "6",
+    "object_repr": "GM - Github",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2022-12-10T01:16:44.873Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "link"
+    ],
+    "object_id": "7",
+    "object_repr": "GM - Linkedin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2022-12-10T01:17:09.651Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "link"
+    ],
+    "object_id": "8",
+    "object_repr": "NM - Github",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2022-12-10T01:17:21.797Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "link"
+    ],
+    "object_id": "9",
+    "object_repr": "NM - Linkedin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2022-12-10T01:17:53.182Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "link"
+    ],
+    "object_id": "10",
+    "object_repr": "NM - Email",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2022-12-10T01:22:02.545Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "aboutus"
+    ],
+    "object_id": "1",
+    "object_repr": "Grzegorz (Greg) Maniak",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2022-12-10T01:22:30.598Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "aboutus"
+    ],
+    "object_id": "2",
+    "object_repr": "Nikolas (Niko) Muller",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2022-12-10T01:23:42.886Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "nav"
+    ],
+    "object_id": "1",
+    "object_repr": "Main nav",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2022-12-10T01:24:18.864Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "footer"
+    ],
+    "object_id": "1",
+    "object_repr": "Temp footer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2022-12-10T01:25:00.831Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "ui_elements",
+      "configuration"
+    ],
+    "object_id": "1",
+    "object_repr": "Main UI Config",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2022-12-10T01:32:38.933Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "product",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Server",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2022-12-10T01:32:52.479Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "124352cb-aa6d-44cc-89f3-2cecec4d75f9",
+    "object_repr": "Rust",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2022-12-10T01:39:23.651Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "50bd8d59-2114-4cf0-84b6-b396a998c2c1",
+    "object_repr": "Battlefield 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2022-12-10T01:41:17.171Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "692bc210-7475-460a-b833-19800b676752",
+    "object_repr": "Conan Exiles",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2022-12-10T01:41:49.733Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "79821130-af9a-48ee-9ed1-e0ddb8552d9e",
+    "object_repr": "Minecraft",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2022-12-10T01:43:14.511Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "ada7bb0d-457e-457e-9fd8-24ff7f759a99",
+    "object_repr": "ARK: Survival Evolved",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2022-12-10T01:43:49.657Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "splash_page",
+      "showcasecarousel"
+    ],
+    "object_id": "1",
+    "object_repr": "Non sesonal",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2022-12-10T01:44:04.806Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "splash_page",
+      "configuration"
+    ],
+    "object_id": "All year round",
+    "object_repr": "Configuration",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2022-12-10T02:08:36.703Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "product",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Credits",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2022-12-10T02:08:50.461Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "3af82608-4770-4255-a08c-781fdeb1b8e9",
+    "object_repr": "100 Credits",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2022-12-10T02:18:11.175Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "product",
+      "discount"
+    ],
+    "object_id": "1",
+    "object_repr": "Discount object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2022-12-10T02:19:35.495Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "product",
+      "discount"
+    ],
+    "object_id": "1",
+    "object_repr": "Discount object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Products\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2022-12-10T02:24:02.709Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "product",
+      "discount"
+    ],
+    "object_id": "1",
+    "object_repr": "Discount object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Max per user\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2022-12-10T02:24:10.384Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "product",
+      "discount"
+    ],
+    "object_id": "1",
+    "object_repr": "Discount object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Max per user\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2022-12-10T02:25:35.852Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "product",
+      "discount"
+    ],
+    "object_id": "2",
+    "object_repr": "Discount object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2022-12-10T02:35:16.924Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "users",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "test_user",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2022-12-11T00:05:21.301Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "79821130-af9a-48ee-9ed1-e0ddb8552d9e",
+    "object_repr": "Minecraft",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Max quantity\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2022-12-11T00:43:32.171Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "product",
+      "serverrequirements"
+    ],
+    "object_id": "1",
+    "object_repr": "ServerRequirements object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2022-12-11T00:43:43.977Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "79821130-af9a-48ee-9ed1-e0ddb8552d9e",
+    "object_repr": "Minecraft",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Server requirements\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2022-12-11T01:23:07.154Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "ui_elements",
+      "footer"
+    ],
+    "object_id": "2",
+    "object_repr": "Real footer",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2022-12-11T01:28:17.539Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "ui_elements",
+      "configuration"
+    ],
+    "object_id": "1",
+    "object_repr": "Main UI Config",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Footer\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2022-12-11T02:19:40.478Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "ui_elements",
+      "link"
+    ],
+    "object_id": "11",
+    "object_repr": "TOS",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2022-12-11T02:20:01.899Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "ui_elements",
+      "link"
+    ],
+    "object_id": "12",
+    "object_repr": "Privacy",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2022-12-11T02:20:11.156Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "ui_elements",
+      "footer"
+    ],
+    "object_id": "2",
+    "object_repr": "Real footer",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Links\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2022-12-11T02:34:27.804Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "ui_elements",
+      "link"
+    ],
+    "object_id": "3",
+    "object_repr": "About us",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Link type\", \"Url\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2022-12-11T02:35:19.584Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "product",
+      "serverrequirements"
+    ],
+    "object_id": "2",
+    "object_repr": "ServerRequirements object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2022-12-11T02:35:21.126Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "ada7bb0d-457e-457e-9fd8-24ff7f759a99",
+    "object_repr": "ARK: Survival Evolved",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Server requirements\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2022-12-11T02:35:48.521Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "product",
+      "serverrequirements"
+    ],
+    "object_id": "3",
+    "object_repr": "ServerRequirements object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2022-12-11T02:35:50.798Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "692bc210-7475-460a-b833-19800b676752",
+    "object_repr": "Conan Exiles",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Server requirements\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2022-12-11T02:35:53.147Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "692bc210-7475-460a-b833-19800b676752",
+    "object_repr": "Conan Exiles",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2022-12-11T02:36:15.007Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "product",
+      "serverrequirements"
+    ],
+    "object_id": "4",
+    "object_repr": "ServerRequirements object (4)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2022-12-11T02:36:16.743Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "50bd8d59-2114-4cf0-84b6-b396a998c2c1",
+    "object_repr": "Battlefield 1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Server requirements\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2022-12-11T02:36:35.391Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "product",
+      "serverrequirements"
+    ],
+    "object_id": "5",
+    "object_repr": "ServerRequirements object (5)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2022-12-11T02:36:36.525Z",
+    "user": [
+      "admin1"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "124352cb-aa6d-44cc-89f3-2cecec4d75f9",
+    "object_repr": "Rust",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Server requirements\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2022-12-11T03:28:00.141Z",
+    "user": [
+      "test"
+    ],
+    "content_type": [
+      "ui_elements",
+      "link"
+    ],
+    "object_id": "11",
+    "object_repr": "TOS",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2022-12-11T04:24:30.242Z",
+    "user": [
+      "test"
+    ],
+    "content_type": [
+      "product",
+      "serverrequirements"
+    ],
+    "object_id": "6",
+    "object_repr": "ServerRequirements object (6)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2022-12-11T04:25:09.281Z",
+    "user": [
+      "test"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "2414a011-79f9-44a2-969e-f4f8c7c41889",
+    "object_repr": "Team Fortress 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2022-12-11T04:25:39.575Z",
+    "user": [
+      "test"
+    ],
+    "content_type": [
+      "product",
+      "serverrequirements"
+    ],
+    "object_id": "7",
+    "object_repr": "ServerRequirements object (7)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2022-12-11T04:26:14.050Z",
+    "user": [
+      "test"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "cdfab83d-f257-4686-974b-c0b84a577d4b",
+    "object_repr": "CS:GO",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2022-12-11T04:27:25.843Z",
+    "user": [
+      "test"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "eb91694e-1aea-467b-923d-75b4be238915",
+    "object_repr": "1000 Credits",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2022-12-11T04:28:24.689Z",
+    "user": [
+      "test"
+    ],
+    "content_type": [
+      "product",
+      "serverrequirements"
+    ],
+    "object_id": "8",
+    "object_repr": "ServerRequirements object (8)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2022-12-11T04:29:17.254Z",
+    "user": [
+      "test"
+    ],
+    "content_type": [
+      "product",
+      "product"
+    ],
+    "object_id": "f40412a8-fcf1-4218-aec1-fa1c1a36b572",
+    "object_repr": "Terraria",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]
