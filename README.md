@@ -1,6 +1,6 @@
 # Notes
 - Name: Scillium Game Hosting
-- Domain: https://scillium.com or http://x00189661.pythonanywhere.com
+- Domain: https://scillium.com 
 It would have been hosted at 'scillium.com' but you need a premium account for that
 
 
