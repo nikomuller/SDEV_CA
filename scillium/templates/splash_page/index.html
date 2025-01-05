@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static '/css/carousel.css' %}">
+    <link rel="stylesheet" href="{% static '/css/splash_page.css' %}">
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+{% endblock %}
+
+{% block title %}
+    Scillium - By the second hosting
+{% endblock %}
+
+{% block content %}
+    <section
+        id = 'splash'
+    >
+        <div
+            class = '
+                content
+            '
+        >   
+            {{ nav_bar }}
+
+            <div class = '
+                cust-height
+                d-flex
+                flex-column
+                container
+                justify-content-center
+            '>
+
+                <section class = '
+                    text-white
+                    text-center
+                    mb-4
+                '
+                >
+                    <h1 class = '
+                        fw-ex-bold
+                    '>
+                        ONLY PAY FOR WH<span 
+                            class = 'sticky-arrows'
+                            style = 'background-image: url({% static '/splash_page/arrows.png' %})'
+                        ></span>AT 
+                        
+                        <span class = 'fst-italic'>
+                            YOU
+                        </span> 
+                        PLAY.
+                    </h1>
+                    <p>
+                        Per second billing, rounded up to the next hundredth of a credit.
+                    </p>
+                </section>
+                
+                
+                {% include 'splash_page/carousel.html' %}
+
+            </div>
+        </div>
+
+        <div 
+            class = 'gradient'
+            style='
+                background-image: url("{% static 'splash_page/grain_gradient_1x.png' %}");
+            '
+        >
+            <span
+                class = 'sticky-top-left'
+                style = 'background-image: url("{% static 'splash_page/spiral_top.png' %}");'
+            ></span>
+        </div>  
+    </section>
+    {{ footer }}
+{% endblock %}

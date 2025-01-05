@@ -1,0 +1,305 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+{% endblock %}
+
+
+{% block title %}
+    Scillium - Account Registration
+{% endblock %}
+
+
+{% block content %}
+    {{ nav_bar }}
+
+    <br>
+
+    <div class="
+        container 
+        mt-4
+        d-flex
+        justify-content-center
+        align-items-center
+    ">
+    
+        <div class="
+            col 
+            col-xl-10     
+        ">
+
+            <div class="
+                rounded
+            ">
+
+                <div class="
+                    row 
+                    g-0
+                ">
+                    <!-- Side carousels -->
+                    <div class="
+                        col-md-6 
+                        col-lg-5 
+                        d-none 
+                        d-md-block
+                    ">
+                    
+
+                        <!-- Game display show case -->
+                        <div 
+                            class="
+                                carousel 
+                                slide
+                                h-100
+                            " 
+                            id = 'showcase-carousel'
+                            data-bs-ride="carousel"
+                        >
+                            <div class="
+                                carousel-inner
+                                h-100
+                            ">
+                                <div class="carousel-item active h-100">
+                                    <img src="{% static 'imgs/ark.jpeg' %}" class="d-block w-100 rounded fill h-100" alt="...">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="{% static 'imgs/bf1card.jpg' %}" class="d-block w-100 rounded fill h-100" alt="...">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="{% static 'imgs/conancardf.jpg' %}" class="d-block w-100 rounded fill h-100" alt="...">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="{% static 'imgs/mccard.jpg' %}" class="d-block w-100 rounded fill h-100" alt="...">
+                                </div>
+                            </div>
+
+                            <!-- Buttons -->
+                            <button 
+                                class="carousel-control-prev" 
+                                type="button" 
+                                data-mdb-target="#showcase-carousel" 
+                                data-mdb-slide="prev">
+
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+
+
+                            <button 
+                                class="carousel-control-next" 
+                                type="button" 
+                                data-mdb-target="#showcase-carousel" 
+                                data-mdb-slide="next">
+
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>  
+
+
+                    <!-- Details -->
+                    <div 
+                        style='background-color: var(--background-color-light);'
+                        class="
+                            col-md-6 
+                            col-lg-7 
+                            d-flex 
+                            align-items-center
+                            rounded-end
+                        "
+                    >
+                        <div class="
+                            card-body 
+                            p-4 
+                            text-light
+                        ">
+                            <div
+                                id='login-form'
+                                
+                                aria-endpoint="{% url 'account:register' %}"
+                                aria-csrf-token="{{ csrf_token }}"
+                                aria-redirect="{% url 'account:detail' %}"
+                            >
+
+                                <!-- Header -->
+                                <div class="
+                                    mb-5
+                                ">
+                                    <!-- Header -->
+                                    <h1 class="
+                                        fw-bold 
+                                    ">Scillium</h1>
+
+                                    <!-- Slogan -->
+                                    <p class="
+                                        text-muted
+                                    ">
+                                        Only pay for what you play.
+                                    </p>
+                                </div>
+                                
+        
+                                
+                                <div class="form-outline mb-4">
+                                  <label class="
+                                      form-label
+                                  " for="username">Username</label>
+                                  <input 
+                                      name='username'
+                                      id='username'
+                                      placeholder="xXsuper_coolXx"
+                                      class="
+                                          form-control 
+                                      "
+                                  />
+                              </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="
+                                        form-label
+                                    " for="email">Email</label>
+                                    <input 
+                                        name='email'
+                                        id='email'
+                                        placeholder="me@scillium.com"
+                                        class="
+                                            form-control 
+                                        "
+                                    />
+                                </div>
+            
+
+                                
+                                <div class="form-outline mb-4">
+                                    <label class="
+                                        form-label
+                                    " for="password">Password</label>
+                                    <input 
+                                        tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover"
+                                        name='password'
+                                        id='password'
+                                        placeholder="super secret password"
+                                        type="password" 
+                                        class="
+                                            form-control 
+                                        "
+                                    />
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="password2" style='display:none'>Password</label>
+                                    <input 
+                                        name='password2'
+                                        id='password2'
+                                        placeholder="confirm super secret password"
+                                        type="password" 
+                                        class="
+                                            form-control 
+                                        "
+                                    />
+                                </div>
+
+                                <!-- Password reqierments -->
+                                <div class="
+                                    mb-4
+                                ">
+                                    <ul>
+                                        <li class="
+                                            text-muted
+                                        ">
+                                            Password must be at least 8 characters long
+                                        </li>
+                                        <li class="
+                                            text-muted
+                                        ">
+                                            Password must contain at least one uppercase letter
+                                        </li>
+                                        <li class="
+                                            text-muted
+                                        ">
+                                            Password must contain at least one lowercase letter
+                                        </li>
+                                        <li class="
+                                            text-muted
+                                        ">
+                                            Password must contain at least one number
+                                        </li>
+                                    </ul>
+                                </div>
+       
+                                <p>
+                                  By clicking the button below, you agree to our 
+                                  <a href="#" class="text-primary">Terms of Service</a> and 
+                                  <a href="#" class="text-primary">Privacy Policy</a>.
+                                </p>  
+                                
+                                <!-- 
+                                    LOGIN or SIGN UP button
+                                    -->
+                                <div class="
+                                    d-flex 
+                                    justify-content-lg-start
+                                    mb-5
+                                ">
+
+                                    <button 
+                                        type="submit" 
+                                        id = 'login-btn'
+                                        class="
+                                            btn 
+                                            btn-outline-light 
+                                        "
+                                    >
+                                        Register
+                                    </button>
+
+                                    <p class="
+                                        text-center
+                                        text-muted
+                                        mx-3
+                                        my-auto
+                                    ">or &nbsp;
+                                        <a 
+                                            href="{% url 'account:login' %}"
+                                            class="
+                                                text-primary
+                                            "
+                                        >Login</a>
+                                    </p>
+                                </div>  
+                                
+
+
+
+                                <div id = 'msg-suc' style = 'display:none;'>
+                                    <div class="alert alert-primary d-flex align-items-center" role="alert">
+                                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">
+                                            <use xlink:href="#info-fill"/>
+                                        </svg>
+                                        <div class='text'></div>
+                                    </div>
+                                </div>
+            
+                                <div id = 'msg-warn' style = 'display:none;'>
+                                    <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                                            <use xlink:href="#exclamation-triangle-fill"/>
+                                        </svg>
+                                        <div class='text'></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/register_bin.js' %}"></script>
+    {{ footer }}
+{% endblock %}

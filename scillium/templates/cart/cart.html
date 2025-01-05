@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+{% endblock %}
+
+{% block metadescription %}
+    This is the shopping cart page. Proceed to review your items and place the order.
+{% endblock %}
+
+{% block title %}
+    Scillium - Shopping Cart
+{% endblock %}
+
+{% block content %}
+    {{ nav_bar }}
+    <span class = '
+        vh-100
+        vw-100
+    '>
+        {% if not cart_items %}
+            <div>
+                <div class="
+                    text-center 
+                    d-flex
+                    justify-content-center
+                    align-items-center
+                    flex-column
+                ">
+                    <br>
+                    <h1 class="text-center fw-bold text-light">
+                        Your shopping cart is empty
+                    </h1>
+                    <p
+                        class="text-center text-light w-50"
+                    >
+                        You have no items in your shopping cart.
+                        Once you add items to your shopping cart, you will be able to review them here.
+                    </p>
+                    <br>
+                    <p class="text-center">
+                        <a href="{% url 'product:all_products' %}" class="btn btn-outline-primary btn-block 
+                        my_custom_button">Explore</a>
+                    </p>
+                </div>
+            </div>
+        {% else %}
+
+            <div>
+                <div class="text-center">
+                    <br>
+                    <h1 class="
+                        text-center
+                        fw-bold
+                        text-light
+                    ">
+                        Your shopping cart
+                    </h1>
+                    <br>
+                </div>
+            </div>
+            <div class="row mx-auto">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+                    <table class="table my_custom_table">
+                        <thead class="my_custom_thead">
+                            <tr>
+                                <th 
+                                    colspan="5"
+                                    class="
+                                        text-center
+                                        fw-bold
+                                        text-light
+                                    "
+                                >
+                                    Your items
+                                </th>
+                            </tr>
+                            
+                        </thead>
+                        <tbody>
+                            {% for cart_item in cart_items %}
+                                <tr>
+                                    <td >
+                                        <img class='rounded' src="{{ cart_item.product.get_card_image }}" alt="{{ cart_item.product.name }}" class="img-fluid" style="max-width: 100px;">
+                                    </td>
+                                    <td class="text-left text-light">
+                                        <a 
+                                            href="{% url 'product:product_detail' cart_item.product.id %}" 
+                                            class="fw-bold">
+                                            {{ cart_item.product.name }}
+                                        </a>
+
+                                        <br>
+                                        Unit Price: €{{cart_item.product.price}}
+                                        <br>
+                                        Qty: {{cart_item.quantity}} x €{{cart_item.product.price}}
+                                    </td>
+
+                                    {% if cart_item.quantity < cart_item.product.stock %}
+                                        <td>
+                                            <a href=" url 'cart:cart_add' cart_item.product.id %}" class="custom_a">Add</a>&nbsp;
+                                            <a href="{% url 'cart:cart_remove' cart_item.product.id %}" class="custom_a">Remove</i></a>&nbsp;
+                                            <a href="{% url 'cart:full_remove' cart_item.product.id %}" class="custom_icon">Remove</i></a>
+                                        </td>
+                                    {% else %}
+                                        <td>
+                                            &nbsp;<a href="{% url 'cart:cart_remove' cart_item.product.id %}" class="
+                                                btn btn-outline-warning m-1
+                                            ">Reduce</a>&nbsp;
+
+                                            <a href="{% url 'cart:full_remove' cart_item.product.id %}" class="
+                                                btn btn-outline-danger m-1
+                                            ">Remove</i></a>
+                                        </td>
+                                        <td></td>
+                                    {% endif %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center text-light">
+                    <table class="table my_custom_table">
+                        <thead class="my_custom_thead">
+                            <tr>
+                                <th 
+                                    colspan="5"
+                                    class="
+                                        text-center
+                                        fw-bold
+                                        text-light
+                                    "
+                                >
+                                    Checkout
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class='text-light'>
+                                    Please review your shopping cart items before proceeding with the order payment.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-left text-light">
+                                    Your total is: <strong>€{{ total }}</strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <form action="" method="POST" class='
+                        d-flex
+                        justify-content-center
+                        align-items-center
+                        flex-row
+                        w-50
+                    '>
+                        {% csrf_token %}
+                            <script src="https://checkout.stripe.com/checkout.js" class="
+                                stripe-button
+                            "
+                                data-key="{{ data_key }}"
+                                data-amount="{{ stripe_total }}"
+                                data-name="Game Server Hosting"
+                                data-description="{{ description }}"
+                                data-image="{% static '{{ product.get_image }}' %}"
+                                data-locale="auto"
+                                data-currency="usd"
+                                data-shipping-address="true"
+                                data-billing-address="true"
+                                data-zip-code="true">
+                            </script>
+                            
+                        <button class ='stripe-button-el btn btn-outline-primary btn-block my_custom_button' style='display:none;'></button>
+
+                        <div class="mx-auto">
+                            <a href="{% url 'product:all_products' %}" class="btn btn-outline-primary btn-block 
+                            my_custom_button">Rent 
+                            More</a>
+                        </div>
+                    </form>                    
+                </div>
+            </div>
+            <br>
+        {% endif %}
+    </span>
+
+    {{ footer }}
+{% endblock %}

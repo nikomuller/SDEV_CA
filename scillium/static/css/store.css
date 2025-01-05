@@ -1,0 +1,50 @@
+.nav-store {
+    background-color: var(--background-color-light);
+    width: 100vw;    
+}
+
+.products {
+    background-color: var(--background-color);
+}
+
+
+
+.prod-card {
+    background-color: var(--background-color-light);
+    border-radius: var(--border-radius);
+
+    /* A bold grey outline */
+    border: 3px solid rgba(167, 166, 166, 0.089);
+}
+
+.prod-card > div {
+    background-color: inherit;
+    border-radius: inherit;
+}
+
+.prod-card img {
+    /* Cover, so theres no edges */
+    object-fit: cover;
+
+    /* 
+        Make that the image height
+        is tied to the parent width
+    */
+    width: 100%;
+    height: 10rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  appearance: none;
+  margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.incrementers input[type=number] {
+    width: 35%;
+}

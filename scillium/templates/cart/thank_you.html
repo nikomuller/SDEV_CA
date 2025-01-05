@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static '/css/carousel.css' %}">
+    <link rel="stylesheet" href="{% static '/css/splash_page.css' %}">
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+{% endblock %}
+
+{% block title %}
+    Scillium - Thank you for your interest!
+{% endblock %}
+
+{% block content %}
+    {{ nav_bar }}
+
+    <section class="d-flex h-100 text-center text-white h-100">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        
+            <main class="px-3">
+                <h1 class='fw-bold'>Thank you for your order!</h1>
+                <!--oRDER id-->
+                <p class='text-muted'>Order ID: {{ order_id }}</p>
+
+                <p class="lead">
+                    You will receive an email confirmation shortly.
+                </p>
+                <p class="lead">
+                    <a href="{% url 'account:detail' %}" class="btn btn-lg btn-outline-success fw-bold">Continue</a>
+                </p>
+            </main>
+    
+        </div>
+    </section>
+    {{ footer }}
+{% endblock %}

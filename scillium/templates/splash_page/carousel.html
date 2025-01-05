@@ -1,0 +1,68 @@
+{% load static %}
+
+<section 
+    name-attr='{{ carousel.name }}'
+    class='game-carousel'
+
+    data-loop-every="{{ carousel.loop_every_ms }}"
+    data-anim-time="{{ carousel.animation_time_ms }}"
+    data-max-images="{{ carousel.max_images }}"
+
+    style="
+        --gc-anim-time: {{ carousel.animation_time_ms }}ms!important;
+    "
+>
+    <button 
+        type = 'button'
+        class = '
+            carousel_btn 
+            btn_left
+            btn-outline-light 
+            border
+            border-2
+            btn 
+        '
+    >
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div>
+        {% for product in carousel_products %}
+            <span
+                id = 'game_{{ product.id }}'
+                name-attr = '{{ product }}'
+                django-url = '{{ product.get_absolute_url }}'
+                image-attr = '{{ MEDIA_URL }}/{{ product.card_image }}'
+                image-alt = 'A screen shot from the game "{{ product }}"'
+                visible = 'false'
+                class = 'item'
+            >
+                <div class = 'carousel_parent'>
+                    <p class = 'text-wrap'>{{ product }}</p>
+
+                    <div class = 'carousel_gradient'></div>
+                    <div class = 'carousel_image'>
+                        
+                    </div>
+                </div>
+            </span>
+        {% endfor %}
+    </div>
+
+    <button 
+        type = 'button'
+        class = '
+            carousel_btn 
+            btn_right
+            btn-outline-light 
+            border
+            border-2
+            btn 
+        '
+    >
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <script src="{% static 'js/carousel_bin.js' %}"
+    ></script>
+</section>

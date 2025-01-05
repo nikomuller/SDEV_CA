@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+{% endblock %}
+
+
+{% block title %}
+    Scillium - Account
+{% endblock %}
+
+
+{% block content %}
+    {{ nav_bar }}
+    <div
+        class = '
+            container
+            cust-height
+            d-flex
+            flex-column
+            justify-content-center
+        '
+    >
+        <h1 class = 'text-center text-light fw-bold'>
+            Welcome, {{ user.username }}
+        </h1>
+
+        <!--Reset password-->
+        <div class = 'd-flex justify-content-center'>
+           
+        </div>
+
+        <hr>
+
+        <!--User info-->
+        <div class = 'd-flex justify-content-center'>
+            <div class = 'card bg-dark text-light m-1'>
+
+                <div class = 'card-body'>
+                    <h5 class = 'card-title fw-bold'>User Info</h5>
+                    <p class = 'card-text'>
+                        Username: {{ user.username }}
+                    </p>
+                    <p class = 'card-text'>
+                        Email: {{ user.email }}
+                    </p>
+                    <p class = 'card-text'>
+                        Date Joined: {{ user.date_joined }}
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class = 'card bg-dark text-light m-1'>
+                <div class = 'card-body'>
+                    <a
+                        href = '{% url 'account:reset' %}'
+                        class = 'btn btn-outline-warning m-1'
+                    >
+                        Reset Password
+                    </a>
+        
+                    <a
+                        href = '{% url 'account:logout' %}'
+                        class = 'btn btn-outline-danger m-1'
+                    >
+                        Logout
+                    </a>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+        <hr>
+
+        <!--Orders-->
+        <div class = 'card bg-dark text-light m-1'>
+            <div class = 'card-body'>
+                <h5 class = 'card-title fw-bold'>Orders</h5>
+                
+                {% for order in orders %}
+                    <div class = '
+                        card 
+                        bg-dark 
+                        p-2
+                        d-flex
+                        justify-content-between
+                        flex-row
+                        m-2
+                    '>
+                        <div
+                            class = 'd-flex
+                                justify-content-between
+                                flex-column
+                            '
+                        >
+                            <span class = 'fw-bold'>Order ID:
+                                <span class = 'fw-normal'>
+                                    {{ order.id }}
+                                </span>
+                            </span>
+
+                            <span class = 'fw-bold'>Order Total:
+                                <span class = 'fw-normal'>
+                                    ${{ order.total }}
+                                </span>
+                            </span>
+                        </div>
+
+                        <div>
+                            <!-- VIew -->
+                            <a
+                                class = 'btn btn-outline-info m-1'
+                            >
+                                View Order
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {{ footer }}
+{% endblock %}

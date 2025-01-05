@@ -1,0 +1,352 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static '/css/product.css' %}">
+{% endblock %}
+
+{% block title %}
+    {{ product.name }} - Game Server Hosting
+{% endblock %}
+
+{% block content %}
+    {{ nav_bar }}
+
+    <!--    
+        product.name
+        product.description
+        product.available
+        product.price
+        product.category
+        product.stock
+
+        product.get_card_image
+        product.get_splash_image
+    -->
+    <!-- image jumbotron -->
+    <div class="col-md-6 splash">
+
+
+        <div class='gradient'></div>
+        <div class="
+            jumbotron
+            jumbotron-fluid
+            w-100
+            h-100
+        ">
+            <div class='splash-img' 
+                style="background-image: url('{{ product.get_splash_image }}');"
+                class="
+                    w-100
+                    h-100
+                    bg-cover
+                    bg-center
+                "
+            ></div>
+        </div>
+    </div>
+
+    <div 
+        class="mw w-100 container"
+    >   
+        <style>
+            @media (max-width: 768px) {
+                .fw {
+                    flex-direction: column!important;
+                }
+
+                section {
+                    width: 100%!important;
+                }
+            }
+        </style>
+
+        <div class = 'row d-flex fw'>
+                
+            <section class="col-7 p-3" id='products-container'>
+                
+
+                <!-- Product info -->
+                <div 
+                    class="info text-light"
+                    aria-product='{{ product.name }}'
+                    aria-id='{{ product.id }}'
+                    aria-price='{{ product.price }}'
+                    aria-max='{{ product.max_quantity }}'
+                    aria-type='{% if product.max_quantity == -1 %}multiple{% elif product.max_quantity == 1 %}single{% else %}multiple{% endif %}'
+                    aria-endpoint = '{% url 'cart:cart_set' %}'
+                    aria-qty = '{{ product.qty }}'
+                    aria-csrf = '{{ csrf_token }}'
+                    id='product_{{ product.id }}'
+                >
+                    <div class="
+                        d-flex
+                    ">
+
+                        <div class="container">
+                            <div
+                                class="
+                                    d-flex
+                                    justify-content-start
+                                    align-items-center
+                                    mb-3
+                                "
+                            >   
+                                <!-- image, in square -->
+                                <div 
+                                    style = "background-image: url('{{ product.get_card_image }}');"
+                                    class="card-image shadow-lg"
+                                ></div>
+
+                                <!-- name -->
+                                <h1 class="
+                                    display-4
+                                    m-3
+                                    fw-bold
+                                    shadow-lg
+                                ">{{ product.name }}</h1>
+                            </div>
+                            
+
+                            <p class="lead">{{ product.description }}</p>
+                            <hr class="my-4">
+
+
+                            <!-- Price -->
+                            <div class="
+                                w-100
+                                mb-3
+                                buttons
+                            ">
+                                {% if product.max_quantity == 1 %}
+
+                                    <button 
+                                        aria-btn='modify'
+                                        btn-state='
+                                            {% if product.in_cart %}
+                                                in_cart
+                                            {% else %}
+                                                not_in_cart
+                                            {% endif %}
+                                        '
+                                        class="
+                                            btn 
+                                            btn-lg
+                                            btn-light
+                                            rounded-start
+                                            incrementers
+                                            w-100
+                                        "
+                                    > 
+                                        {% if product.in_cart %}
+                                            Remove from cart
+                                        {% else %}
+                                            Add to cart 
+                                        {% endif %}
+                                    </button>
+
+
+                                {% else %}
+
+
+                                    <span class = '
+                                        btn-group
+                                        btn-group-lg
+                                        incrementers
+                                        w-100
+                                    '>
+
+                                        <!-- - Button -->
+                                        <button 
+                                            type="button"
+                                            aria-btn='minus'
+                                            class="
+                                                btn 
+                                                btn-sm 
+                                                btn-outline-light
+                                                rounded-start
+                                            "
+                                        > - </button>
+
+
+                                        <!-- Counter -->
+                                        <input 
+                                            aria-btn='counter'
+                                            type="number" 
+                                            name="quantity" 
+                                            value="{{ product.qty }}" 
+                                            class="
+                                                form-control 
+                                                form-control-sm
+                                                text-center
+                                                w-100
+                                                rounded-0
+                                            "
+                                            min="0"
+                                            max="{{ product.max_quantity }}"
+                                        >
+
+                                        
+                                        <!-- + Button -->
+                                        <button 
+                                            type="button"
+                                            aria-btn='plus'
+                                            class="
+                                                btn 
+                                                btn-sm 
+                                                btn-outline-light
+                                                rounded-end
+                                            "
+                                        > + </button>
+                                    </span>
+                                {% endif %}
+                            </div>
+
+                            <hr class="my-4">
+
+                            <div>
+                                {% for category in product.category.all %}
+                                    <a 
+                                        class="badge bg-secondary text-light"
+                                        href="{{category.get_search_url}}"
+                                    >{{ category.name }}</a>
+                                {% endfor %}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section class="col-5">
+                <div class="
+                    container 
+                    details
+                    text-light
+                    p-3
+                    shadow-lg
+                ">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="display-4 fw-bold">Details</h1>
+                            <hr class="my-4">
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        {% if product.server_requirements %}
+                            <div class="col-12">
+
+                                <p class="lead mb-1">
+                                    CPU <span class='text-muted'>{{ product.server_requirements.cpu }} / 8</span>
+
+                                    <div class="
+                                        rating
+                                        d-flex
+                                        justify-content-start
+                                        align-items-center
+                                        gap-2
+                                    " role="rating" data-rating="3">
+                                        <!-- We need to loop x ammount of times -->
+                                        {% for i in product.server_requirements.get_cpu_list %}
+
+                                            {% if i.filled %}
+                                                <span class="bg-white rounded w-50" data-value="{{ i.value }}">&nbsp;<span class="bg-white"></span></span>
+                                            {% else %}
+                                                <span class="rounded w-50 border border-1 border-white" data-value="{{ i.value }}">&nbsp;<span class="bg-white"></span></span>
+                                            {% endif %}
+
+                                        {% endfor %}
+                                    </div>
+                                </p>
+
+                                
+                                <p class="lead">
+                                    GPU <span class='text-muted'>{{ product.server_requirements.gpu }} / 4</span>
+
+                                    <div class="
+                                        rating
+                                        d-flex
+                                        justify-content-start
+                                        align-items-center
+                                        gap-2
+                                    " role="rating" data-rating="3">
+                                        <!-- We need to loop x ammount of times -->
+                                        {% for i in product.server_requirements.get_gpu_list %}
+
+                                            {% if i.filled %}
+                                                <span class="bg-white rounded w-50" data-value="{{ i.value }}">&nbsp;<span class="bg-white"></span></span>
+                                            {% else %}
+                                                <span class="rounded w-50 border border-1 border-white" data-value="{{ i.value }}">&nbsp;<span class="bg-white"></span></span>
+                                            {% endif %}
+
+                                        {% endfor %}
+                                    </div>
+                                </p>
+
+                                <p class="lead">
+                                    RAM <span class='text-muted'>{{ product.server_requirements.ram }} / 32</span>
+
+                                    <div class="
+                                        rating
+                                        d-flex
+                                        justify-content-start
+                                        align-items-center
+                                        gap-2
+                                    " role="rating" data-rating="3">
+                                        <!-- We need to loop x ammount of times -->
+                                        {% for i in product.server_requirements.get_ram_list %}
+
+                                            {% if i.filled %}
+                                                <span class="bg-white rounded w-50" data-value="{{ i.value }}">&nbsp;<span class="bg-white"></span></span>
+                                            {% else %}
+                                                <span class="rounded w-50 border border-1 border-white" data-value="{{ i.value }}">&nbsp;<span class="bg-white"></span></span>
+                                            {% endif %}
+
+                                        {% endfor %}
+                                    </div>
+                                </p>
+                            </div>
+
+                            <hr class="my-4">
+                        {% endif %}
+
+
+                        <!-- PRICE -->
+                        <div class="
+                            col-12
+                            text-center
+                            d-flex
+                            justify-content-center
+                            text-center
+                            align-items-center  
+                            gap-2
+                        ">
+                            <p class = '
+                                btn
+                                btn-lg
+                                btn-outline-success
+                                m-0
+                            '>
+                                ${{ product.price }} 
+                            </p>
+
+                            {% if product.time_limit %}
+                                <span class="text-muted">/ {{ product.time_limit }} days</span>
+                            {% endif %}
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="{% static 'js/store_bin.js' %}"></script>
+    {{ footer }}
+{% endblock %}

@@ -1,0 +1,245 @@
+<!--
+    We are using bootstrap for the navbar,
+    for its responsiveness.
+
+    There are two types of navbars:
+    - desktop: When the screen is wide enough
+    - mobile: When the screen is too small
+        this will be done in a google esc
+        style menu, where you click on the
+        profile icon and it will show the
+        pop up menu.
+
+    Both of these navbars will be in the
+    same file, but will be hidden and
+    shown depending on the screen size.
+
+    They will also use the same model.
+    Also, as a little challenge, I will
+    try not to use any javascript, or
+    adleast not much.
+-->
+<!-- Temp Style -->
+<!-- 
+<style>
+    /* Desktop devices */
+    @media (min-width: 768px) {
+        [nav-mode='desktop'] {
+            display: block;
+        }
+
+        [nav-mode='mobile'] {
+            display: none;
+        }
+    }
+
+    /* Mobile devices */
+    @media (max-width: 768px) {
+        [nav-mode='desktop'] {
+            display: none;
+        }
+
+        [nav-mode='mobile'] {
+            display: block;
+        }
+    }
+</style>
+-->
+
+<style>
+    [nav-mode='desktop'] {
+        display: block;
+    }
+
+    [nav-mode='mobile'] {
+        display: none;
+    }
+</style>
+
+<nav
+    class = '
+        py-2
+        px-4
+    '
+>
+    <!-- Desktop Navbar -->
+    <span 
+        nav-mode = 'desktop'
+        class = ''
+    >
+        <!-- Middle links -->   
+        <div class = '
+            d-flex 
+            flex-wrap
+            align-items-center 
+            justify-content-center 
+            justify-content-md-between 
+        '>
+
+            <!-- Brand -->
+            <a class = '
+                d-flex 
+                align-items-center 
+                col-md-4
+                mb-2 
+                mb-md-0 
+                text-white 
+                text-decoration-none
+                fw-bold
+                fs-5
+                fst-italic
+            ' href = '/'>Scillium</a>
+
+
+            <!-- Links -->
+            <ul class = '
+                nav 
+                col-md-4
+                mb-2 
+                justify-content-center 
+                mb-md-0
+            '>
+                {% for link in links %}
+                    <li>
+                        <a 
+                            href = '{{ link.get_url }}'
+                            class = '
+                                nav-link 
+                                px-2 
+                                text-white
+                            '
+                        >
+                            {{ link }}
+                        </a>
+                    </li>
+                {% endfor %}
+
+                <!-- dropdown -->
+                <li class = 'nav-item
+                    dropdown
+                '>
+
+                    <a 
+                        class = '
+                            nav-link 
+                            px-2 
+                            text-white
+                            dropdown-toggle
+                        '
+                        href = '#'
+                        id = 'dropdown01'
+                        data-bs-toggle = 'dropdown'
+                        aria-expanded = 'false'
+                    >
+                        Extra
+                    </a>
+
+                    <ul 
+                        class = '
+                            dropdown-menu
+                            bg-dark
+                        '
+                        aria-labelledby = 'dropdown01'
+                    >
+                        <li>
+                            <a 
+                                href = '/account/'
+                                class = '
+                                    nav-link 
+                                    px-2 
+                                    text-white
+                                    dropdown-item
+                                '
+                            >
+                                Account
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a 
+                                href = '/cart/'
+                                class = '
+                                    nav-link 
+                                    px-2 
+                                    text-white
+                                    dropdown-item
+                                '
+                            >
+                                Cart
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a 
+                                href = '/extra/terms'
+                                class = '
+                                    nav-link 
+                                    px-2 
+                                    text-white
+                                    dropdown-item
+                                '
+                            >
+                                TOS
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a 
+                                href = '/extra/policy'
+                                class = '
+                                    nav-link 
+                                    px-2 
+                                    text-white
+                                    dropdown-item
+                                '
+                            >
+                                Privacy
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Controll panel / login -->
+            <div class='
+                text-end
+                col-md-4
+            '>
+                <!-- <button type='button' 
+                    class='
+                        btn 
+                        text-light
+                        fw-semibold
+                    '
+                    onclick="location.href='/account/'"
+                >ACCOUNT</button> -->
+
+                <button type='button' 
+                    class='
+                        btn 
+                        btn-outline-light 
+                        border
+                        border-2
+                        fw-semibold
+                    '
+                    onclick="location.href='{% url 'account:detail' %}'"
+
+                >ACCOUNT</button>
+            </div>
+        </div>
+                    
+    </span>
+
+
+    <!-- Mobile Navbar -->
+    <span
+        nav-mode = 'mobile'
+        class = 'navbar navbar-expand-lg navbar-light bg-light'
+    >
+        
+    </span>
+</nav>
+
+{{ footer }}
+
+

@@ -1,0 +1,26 @@
+<div class = "
+    footer 
+    navbar-fixed-bottom 
+    p-1
+    w-100
+">
+    <p class = "
+        text-center
+        text-muted
+        m-1
+    ">&copy; Scillium, An Online Game Server Hosting. All Rights Reserved.</p>
+    
+    <hr>
+
+    <div class ='
+        text-center
+    '>
+        {% for link in links %}
+            <a class='
+                m-0 
+                text-muted
+                text-decoration-none
+            ' href = "{{ link.get_url }} ">{{ link }}</a> |
+        {% endfor %}
+    </div>
+</div>

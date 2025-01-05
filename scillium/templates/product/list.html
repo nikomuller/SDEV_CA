@@ -1,0 +1,457 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static '/css/store.css' %}">
+{% endblock %}
+
+{% block title %}
+    Scillium - Store
+{% endblock %}
+
+{% block content %}
+    {{ nav_bar }}
+
+    <!--  
+        NAVIGATION BAR
+    -->
+    <div class="
+        nav-store
+    ">
+        <nav class="
+            d-flex 
+            flex-wrap 
+            align-items-center 
+            justify-content-center 
+            justify-content-between
+            container
+            nav-store
+            p-2
+        ">
+
+            <ul class="
+                nav 
+                mb-2 
+                justify-content-center 
+                mb-md-0
+            ">
+                <li>
+                    <a href="
+                        {% url 'cart:cart_detail' %}
+                    " class="nav-link text-light px-2">
+                        View cart
+                    </a>
+                </li>
+                
+                <li 
+                    class="
+                        nav-item 
+                        dropdown
+                    "
+                >
+
+                    <a 
+                        class="
+                            nav-link 
+                            dropdown-toggle
+                        " 
+                        href="#" 
+                        data-bs-toggle="dropdown" 
+                        id="cat_dropdown"
+                        aria-expanded="false"
+                    >
+                        Categories
+                    </a>
+
+                    <ul 
+                        class="
+                            dropdown-menu
+                            bg-dark
+                            border-dark
+                        " 
+                        aria-labelledby="cat_dropdown"
+                    >
+                        <!--
+                            Category reset link
+                        -->
+                        <li><a class="dropdown-item bg-dark border-dark text-light" href="
+                        {% url 'product:all_products' %}">None</a></li>
+
+
+                        <!-- 
+                            Loop trough all the categories and create a link for each one
+                        -->
+                        {% for cat in categorys %}
+                            <li>
+                                <a 
+                                    class="dropdown-item bg-dark border-dark text-light" 
+                                    href="{% url 'product:products_by_category' cat.slug %}"
+                                >{{ cat.name }}</a>
+                            </li>
+                        {% endfor %}
+
+                    </ul>
+                </li>
+            </ul>
+
+
+            <!-- 
+                Search bar
+            -->
+            <form 
+                class="
+                    nav-item 
+                    w-25
+                    d-flex
+                    justify-content-center
+                "
+
+                action="
+                    {{ search_url }}
+                "
+            >
+                <input type="search" class="
+                    form-control 
+                    w-75
+                    bg-dark
+                    border-dark
+                    rounded-0
+                    text-light
+                    rounded-start
+                " placeholder="Search" aria-label="Search" name="q">
+
+                <button type="submit" class="
+                    btn 
+                    col-1
+                    w-auto
+                    btn-outline-primary
+                    rounded-0
+                    rounded-end
+                ">Search</button>
+            </form>
+        </nav>
+
+
+        <!-- 
+            CREDITS jumbotron
+        -->
+        <section class="
+            jumbotron 
+            text-center
+            p-4
+        ">
+            <div class="container">
+                <hr>
+                {% if jumbotron.override %}
+                    <!-- Text -->
+                    <h1 class="
+                        jumbotron-heading
+                        text-light
+                        fw-bold
+                    ">{{ jumbotron.text }}</h1>
+
+                    <!-- Clear button -->
+                    <a href="{% url 'product:all_products' %}" class="
+                        btn 
+                        btn-outline-primary 
+                        my-2
+                        p-2
+                    ">Return</a>
+
+                {% else %}
+                    <h1 class="
+                        jumbotron-heading
+                        text-light
+                        fw-bold
+                    ">Buy Credits</h1>
+
+                    <p class="
+                        text-light
+                    ">
+                        1 credit / 1 GB RAM or 1 vCPU / 1 hour
+                        100 credits = € 1 
+
+                        Simple as, no trickery here.
+                    </p>
+
+                    <div
+                        class="
+                            d-flex 
+                            justify-content-center 
+                            align-items-center
+                            flex-column
+                        "
+                    > 
+                        <input 
+                            type="range" 
+                            class="
+                                form-range
+                                p-2
+                                w-25
+                            " 
+                            min="1"
+                            max="100" 
+                            step="1" 
+                            value="1"
+                            id="credits_range"
+                        >
+
+                        <a href="#" class="
+                            btn 
+                            btn-outline-primary 
+                            my-2
+                            p-2
+                        ">Add to cart</a>
+                    </div>
+                {% endif %}
+            </div>
+        </section>
+
+
+
+        <!--  
+            PRODUCT LIST
+        -->
+        <div class="
+            album 
+            py-5
+            products
+        ">
+            <div class="container">
+                <div 
+                    id='products-container'
+                    class="
+                        row 
+                        row-cols-1 
+                        row-cols-sm-2 
+                        row-cols-md-3 
+                        g-3
+                    "
+                >
+                
+
+                    {% for product in products %}
+                        <div 
+                            class='col prod'
+                            aria-product='{{ product.name }}'
+                            aria-id='{{ product.id }}'
+                            aria-price='{{ product.price }}'
+                            aria-max='{{ product.max_quantity }}'
+                            aria-type='{% if product.max_quantity == -1 %}multiple{% elif product.max_quantity == 1 %}single{% else %}multiple{% endif %}'
+                            aria-endpoint = '{% url 'cart:cart_set' %}'
+                            aria-qty = '{{ product.qty }}'
+                            aria-csrf = '{{ csrf_token }}'
+                            id='product_{{ product.id }}'
+                        >   
+                            <div class='
+                                card 
+                                prod-card
+                                shadow-sm
+                                text-light
+                            '>
+                                
+                                <img
+                                    src="{{ product.get_card_image }}"
+                                    class="
+                                        card-img-top
+                                        prod-img
+                                    "
+                                    alt="..."
+                                >
+                            
+
+                                <div class="
+                                    card-body
+                                    buttons
+                                ">
+                                    
+                                    <p class="
+                                        card-text
+                                    ">
+                                        {{ product.name }}
+                                    </p>
+
+                                    <div class="
+                                        d-flex 
+                                        justify-content-between 
+                                        align-items-center
+                                    ">  
+                                    <!-- 
+                                        This is here so we can redirect 
+                                        the user to this, instead of an 
+                                        actual page.
+                                    -->
+
+                                    {% if product.max_quantity == 1 %}
+
+                                        <button 
+                                            aria-btn='modify'
+                                            btn-state='
+                                                {% if product.in_cart %}
+                                                    in_cart
+                                                {% else %}
+                                                    not_in_cart
+                                                {% endif %}
+                                            '
+                                            class="
+                                                btn 
+                                                btn-sm 
+                                                btn-light
+                                                rounded-start
+                                                incrementers
+                                            "
+                                        > 
+                                            {% if product.in_cart %}
+                                                Remove from cart
+                                            {% else %}
+                                                Add to cart 
+                                            {% endif %}
+                                        </button>
+
+                                    {% else %}
+                                        <span class = '
+                                            btn-group
+                                            incrementers
+                                            w-50
+                                        '>
+
+                                            <!-- - Button -->
+                                            <button 
+                                                type="button"
+                                                aria-btn='minus'
+                                                class="
+                                                    btn 
+                                                    btn-sm 
+                                                    btn-outline-light
+                                                    rounded-start
+                                                "
+                                            > - </button>
+
+
+                                            <!-- Counter -->
+                                            <input 
+                                                aria-btn='counter'
+                                                type="number" 
+                                                name="quantity" 
+                                                value="{{ product.qty }}" 
+                                                class="
+                                                    form-control 
+                                                    form-control-sm
+                                                    text-center
+                                                    rounded-0
+                                                "
+                                                min="0"
+                                                max="{{ product.max_quantity }}"
+                                            >
+
+                                            
+                                            <!-- + Button -->
+                                            <button 
+                                                type="button"
+                                                aria-btn='plus'
+                                                class="
+                                                    btn 
+                                                    btn-sm 
+                                                    btn-outline-light
+                                                    rounded-end
+                                                "
+                                            > + </button>
+                                        </span>
+                                    {% endif %}
+
+              
+                                    <button type="button" 
+                                        class="
+                                            btn 
+                                            btn-sm 
+                                            btn-outline-light
+                                        "
+                                        
+                                        onclick="location.href = '{{ product.get_absolute_url }}';"
+                                    > View </button>
+          
+                                        
+
+                                        <small>
+                                            ${{ product.price }}
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+                
+            </div>
+
+            <div class="
+                mx-auto
+                container
+                mt-4
+            ">
+                <hr>
+
+                {% if products.paginator.num_pages > 1 %}
+                    <div class="text-center">
+                        <!-- Button for going left -->
+                        <a 
+                            {% if products.has_previous %}
+                                href="?page={{products.previous_page_number}}"
+                            {% endif %}
+                            class="
+                                btn 
+                                btn-outline-light 
+                                btn-sm
+                                mx-3
+                                fs-6
+                                {% if not products.has_previous %}
+                                    disabled
+                                {% endif %}
+                            "
+                        > < </a>
+
+                    
+                        {% for pg in products.paginator.page_range %}
+                        
+                            <a 
+                                href="?page={{pg}}" 
+                                class="
+                                    btn 
+                                    btn-outline-light 
+                                    btn-sm 
+                                    {% if products.number == pg %}active{% endif %}
+                            "> {{pg}} </a>
+                            
+                        {% endfor %}
+     
+
+                        <!-- Button for going right -->
+                        <a 
+                            {% if products.has_next %}
+                                href="?page={{products.next_page_number}}"
+                            {% endif %}
+
+                            class="
+                                btn 
+                                btn-outline-light 
+                                btn-sm
+                                mx-3
+                                fs-6
+                                {% if not products.has_next %}
+                                    disabled
+                                {% endif %}
+                            "
+                        > > </a>
+
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/store_bin.js' %}"></script>
+
+    {{ footer }}
+{% endblock %}

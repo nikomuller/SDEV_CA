@@ -1,0 +1,7 @@
+python manage.py makemigrations order &&
+python manage.py makemigrations cart &&
+python manage.py makemigrations product &&
+python manage.py makemigrations splash_page &&
+python manage.py makemigrations users &&
+python manage.py makemigrations ui_elements &&
+python manage.py migrate
