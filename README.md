@@ -1,6 +1,6 @@
 #How To Run
 
-git clone https://github.com/nikomuller/SDEV_CA.git
+git clone https://github.com/nikomuller/Game-Hosting-Website.git
 cd your-repository-folder
 
 python -m venv pyvenv
