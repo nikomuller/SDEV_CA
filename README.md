@@ -1,4 +1,7 @@
 # Notes
+
+- Changed to this repo as I have ownership and have made it public.
+
 - Name: Scillium Game Hosting
 - Domain: https://scillium.com 
 It would have been hosted at 'scillium.com' but you need a premium account for that
