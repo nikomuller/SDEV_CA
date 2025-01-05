@@ -1,0 +1,14 @@
+# - django
+# - django-colorfield
+# - stripe
+# - pillow
+# - django-crispy-forms
+# - crispy-bootstrap5
+# - djangorestframework
+django
+django-colorfield
+stripe
+pillow
+django-crispy-forms
+crispy-bootstrap5
+djangorestframework
